@@ -4,7 +4,10 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon app.js"
+    "start": "node app.js",
+    "build:views": "cd views && npm install && npm run build",
+    "build:server": "cd server && npm install",
+    "build": "npm run build:views && npm run build:server"
   },
   "author": "Milind Goswami",
   "license": "ISC",
