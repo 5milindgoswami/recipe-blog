@@ -7,7 +7,7 @@ const flash = require("connect-flash");
 const fileUpload = require("express-fileupload");
 
 const app = express();
-const port = process.env.PORT || 5000;
+const port = process.env.PORT || 5001;
 
 require("dotenv").config();
 
@@ -30,6 +30,10 @@ app.set('view engine', "ejs")
 
 const routes = require("./server/routes/recipeRoutes.js");
 app.use("/", routes);
+app.use((err, req, res, next) => {
+    console.error(err.stack);
+    res.status(500).send('Something broke!');
+});
 
 app.listen(port, ()=>{
     console.log(`Listening to port ${port}`);
