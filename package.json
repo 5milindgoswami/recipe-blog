@@ -1,14 +1,9 @@
 {
   "name": "recipe-blog",
   "version": "1.0.0",
-  "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node app.js",
-    "build:views": "cd views && npm install && npm run build",
-    "build:server": "cd server && npm install",
-    "build": "npm run build:views && npm run build:server"
-  },
+    "start": "node app.js"},
   "author": "Milind Goswami",
   "license": "ISC",
   "description": "",
@@ -25,6 +20,8 @@
     "mongoose": "^8.5.0"
   },
   "devDependencies": {
-    "nodemon": "^3.1.4"
+    "nodemon": "^3.1.4",
+    "webpack": "^5.93.0",
+    "webpack-cli": "^5.1.4"
   }
 }
